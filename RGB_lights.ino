@@ -1,6 +1,6 @@
-int redlight = D5;
-int greenlight = D4;
-int bluelight = D6;
+int redlight = D6;
+int greenlight = D5;
+int bluelight = D4;
 
 void setup() {
     pinMode(redlight, OUTPUT);
@@ -48,6 +48,38 @@ int ledON(String command){
     digitalWrite(greenlight,HIGH);
     digitalWrite(bluelight,HIGH);
     return 0;
+    
+    }
+    
+    else if (command =="m1"){
+       
+    digitalWrite(redlight,HIGH);
+    delay(300);
+    digitalWrite(redlight,LOW);
+    digitalWrite(greenlight,HIGH);
+    delay(300);
+    digitalWrite(greenlight,LOW);
+    digitalWrite(bluelight,HIGH);
+    delay(300);
+    digitalWrite(bluelight,LOW);
+    digitalWrite(redlight,HIGH);
+    delay(200);
+    digitalWrite(redlight,LOW);
+    digitalWrite(greenlight,HIGH);
+    delay(150);
+    digitalWrite(bluelight,HIGH);
+    digitalWrite(greenlight,LOW);
+    delay(500);
+    digitalWrite(bluelight,LOW);
+    digitalWrite(redlight,HIGH);
+    delay(250);
+    digitalWrite(redlight,LOW);
+    digitalWrite(greenlight,HIGH);
+    delay(250);
+    digitalWrite(greenlight,LOW);
+    
+    return 0;
+    
     
     }
     
